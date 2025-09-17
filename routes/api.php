@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PizzaController;
 
-Route::get('/menu-pizza', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+Route::get('/menu-pizzas', [PizzaController::class, 'index'] );
+Route::get('/pizza/{id}', [PizzaController::class, 'pizza'] );
