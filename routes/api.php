@@ -38,7 +38,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //grupos de rutas protegidas con autenticación
 
 Route::group(['middleware' => ["auth:sanctum"]], function(){
-    //ruta para el logout
+    //ruta para el logout, tiene que mandar el token en el header
     Route::get('/logout', [UserController::class, 'userLogout']);
 
     //rutas administradores
