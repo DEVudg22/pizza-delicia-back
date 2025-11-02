@@ -11,7 +11,7 @@ class Pizza extends Model
    
 
     protected $guarded = [];
-
+    //una pizza tiene muchos precios
     public function prices(): HasMany
     {
         return $this->hasMany(Price::class);

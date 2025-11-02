@@ -10,7 +10,7 @@ class Price extends Model
 {
     
     protected $guarded = [];
-
+    //muchos precios tienen una pizza
     public function pizza(): BelongsTo
     {
         return $this->belongsTo(Pizza::class);
